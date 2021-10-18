@@ -42,14 +42,14 @@ class _HomePageState extends State<HomePage> {
                           Padding(
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 8.0, vertical: 36.0),
-                            child: FlutterLogo(
-                              size: 25.0,
+                            child: BlackQueen(
+                              size: 30.0,
                             ),
                           ),
                           Text(
                             "Your Ultimate Chess Buddy",
                             style:
-                                TextStyle(fontSize: 25.0, color: Colors.blue),
+                                TextStyle(fontSize: 27.0, color: Colors.black),
                           ),
                         ],
                       ),
@@ -109,6 +109,25 @@ class _HomePageState extends State<HomePage> {
                           style: TextStyle(fontSize: 18.0),
                         ), () {
                       Navigator.pushNamed(context, '/play_game_page');
+                    }),
+                  ],
+                ),
+              ),
+              Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    SectionTitle("Login !!!"),
+                    SectionCard(
+                        Icon(
+                          Icons.login,
+                          size: 80.0,
+                        ),
+                        Text(
+                          "Login and Play with friends online",
+                          style: TextStyle(fontSize: 18.0),
+                        ), () {
+                      Navigator.pushNamed(context, '/login_screen_page');
                     }),
                   ],
                 ),
